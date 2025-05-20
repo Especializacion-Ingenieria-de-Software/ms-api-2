@@ -1,15 +1,16 @@
 server:
-    port: 8081
+    port: 0
 
 spring:
     application:
-        name: usuarios-tareas
-    
-    
+        name: ms-usuarios
 
-# eureka:
-#     cliente:
-#         service-url:
-#             defaultZone: https://localhost:8761/eureka/
-#     instance:
-#         prefer-ip-address: true
+    cloud:
+        Discovery:
+            enable: true
+
+    
+eureka:
+    cliente:
+        service-url:
+            defaultZone: https://localhost:8761/eureka/
