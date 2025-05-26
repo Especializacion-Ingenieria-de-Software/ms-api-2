@@ -1,22 +1,22 @@
-package com.msUsuarios.dto;
+package com.msusuarios.dto;
 
 public class UsuariosDTO {
     private Long id;
     private String name;
     private String email;
-    private Number mobile;
+    private String mobile;
 
     public UsuariosDTO() {
     }
 
-    public UsuariosDTO(Long id, String name, String email, Number mobile) {
+    public UsuariosDTO(Long id, String name, String email, String mobile) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.mobile = mobile;
     }
 
-    //Getters y Setters
+    //Getters and Setters
 
     public long getId(){ return id; }
     public void setId(Long id){ this.id = id; }
@@ -27,6 +27,6 @@ public class UsuariosDTO {
     public String getEmail(){ return email; }
     public void setEmail(String email){ this.email = email; }
 
-    public Number getMobile(){ return mobile; }
-    public void setEmail(Number mobile){ this.mobile = mobile; }
+    public String getMobile(){ return mobile; }
+    public void setMobile(String mobile){ this.mobile = mobile; }
 }
