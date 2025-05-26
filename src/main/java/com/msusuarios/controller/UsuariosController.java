@@ -33,6 +33,12 @@ public class UsuariosController {
         return usuariosService.getUser(id);
     }
 
+    @GetMapping("/health")
+    @Operation(summary = "Show service health")
+    public String getUser() {
+        return "Service Up!!!";
+    }
+
     // @GetMapping("/usuarios/{name}")
     // @Operation(summary = "Show a pro name")
     // public UsuariosDTO buscarName(@RequestParam String name) {
