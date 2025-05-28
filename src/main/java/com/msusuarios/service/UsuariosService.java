@@ -24,9 +24,9 @@ public class UsuariosService {
         return bdClient.getUser(id);
     }
 
-    // public UsuariosDTO busquedaName(String name){
-    //     return bdClient.busquedaName(name);
-    // }
+    public UsuariosDTO getName(String name){
+        return bdClient.getName(name);
+    }
 
     public UsuariosDTO createUser(UsuariosRequest request){
         return bdClient.createUser(request);

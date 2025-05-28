@@ -27,7 +27,7 @@ public class UsuariosController {
         return usuariosService.getUsers();
     } 
     
-    @GetMapping("/usuarios/{id}")
+    @GetMapping("/usuarios/id/{id}")
     @Operation(summary = "Show 1 record pro id")
     public UsuariosDTO getUser(@PathVariable Long id) {
         return usuariosService.getUser(id);
@@ -39,11 +39,11 @@ public class UsuariosController {
         return "User service Up!!!";
     }
 
-    // @GetMapping("/usuarios/{name}")
-    // @Operation(summary = "Show a pro name")
-    // public UsuariosDTO buscarName(@RequestParam String name) {
-    //     return usuariosService.busquedaName(name);
-    // }
+    @GetMapping("/usuarios/name/{name}")
+    @Operation(summary = "Show 1 record pro name")
+    public UsuariosDTO getName(@RequestParam String name) {
+        return usuariosService.getName(name);
+    }
 
     @PostMapping("/usuarios")
     @Operation(summary = "Create a record")
@@ -62,11 +62,8 @@ public class UsuariosController {
         } else{
             return null;
         }
-
     }
-        
     
-
     @DeleteMapping("/usuarios/{id}")
     @Operation(summary = "Delete a record pro id")
     public void deleteUser(@PathVariable Long id) {

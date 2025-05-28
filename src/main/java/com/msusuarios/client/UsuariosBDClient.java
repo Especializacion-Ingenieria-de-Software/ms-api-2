@@ -14,22 +14,22 @@ import java.util.List;
 @EnableDiscoveryClient
 public interface UsuariosBDClient {
     
-    @GetMapping("/usuarios")
+    @GetMapping("/taskuser")
     List<UsuariosDTO> getUsers();
 
-    @GetMapping("/usuarios/{id}")
+    @GetMapping("/taskuser/id/{id}")
     UsuariosDTO getUser(@PathVariable Long id);
 
-    // @GetMapping("/usuarios/{name}")
-    // UsuariosDTO busquedaName(@RequestParam String name);
+    @GetMapping("/taskuser/name/{name}")
+    UsuariosDTO getName(@RequestParam String name);
 
-    @PostMapping("/usuarios")
+    @PostMapping("/taskuser")
     UsuariosDTO createUser(@RequestBody UsuariosRequest request);
 
-    @PutMapping("/usuarios/{id}")
+    @PutMapping("/taskuser/{id}")
     UsuariosDTO updateUser(@PathVariable Long id, @RequestBody UsuariosRequest request);
 
-    @DeleteMapping("/usuarios/{id}")
+    @DeleteMapping("/taskuser/{id}")
     void deleteUser(@PathVariable Long id);
 }
 
