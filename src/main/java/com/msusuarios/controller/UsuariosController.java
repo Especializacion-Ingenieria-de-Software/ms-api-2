@@ -35,8 +35,8 @@ public class UsuariosController {
 
     @GetMapping("/health")
     @Operation(summary = "Show service health")
-    public String getUser() {
-        return "Service Up!!!";
+    public String getHealth() {
+        return "User service Up!!!";
     }
 
     // @GetMapping("/usuarios/{name}")
