@@ -17,7 +17,6 @@ public class UsuariosDTO {
     }
 
     //Getters and Setters
-
     public long getId(){ return id; }
     public void setId(Long id){ this.id = id; }
 
